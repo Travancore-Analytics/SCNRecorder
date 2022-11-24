@@ -8,19 +8,21 @@ let package = Package(
     products: [
         .library(
             name: "SCNRecorder",
-            targets: ["SCNRecorder"]),
+            targets: ["SCNRecorder","MulticastDelegate"]
+        )        
     ],
     dependencies: [
-      .package(
-          url: "https://github.com/v-grigoriev/MulticastDelegate.git",
-          from: "1.0.1"
-      )
     ],
     targets: [
         .target(
             name: "SCNRecorder",
             dependencies: ["MulticastDelegate"],
-            path: "Sources"
+            path: "Sources/MyLibrarySwift"
+            
+        ),
+        .target(
+            name: "MulticastDelegate",
+            path: "Sources/MulticastDelegate"
         )
     ]
 )

@@ -26,7 +26,6 @@
 import Foundation
 import SceneKit
 import MulticastDelegate
-
 private var multicastDelegateKey: UInt8 = 0
 
 extension SCNView {
